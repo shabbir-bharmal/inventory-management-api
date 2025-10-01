@@ -22,5 +22,31 @@ namespace InventoryDashboard.Controllers
             return Ok(values);
         }
 
+        [HttpGet("download")]
+        public async Task<IActionResult> DownloadExcel()
+        {
+
+            string blobStorageConnectionString = "{BLOB_STORAGE_CONNECTION_STRING}";
+            string blobStorageContainerName = "{BLOB_STORAGE_CONTAINER_NAME}";
+
+            var containerClient = new BlobContainerClient(blobStorageConnectionString, blobStorageContainerName);
+            var blobClient = containerClient.GetBlobClient("{FILE_NAME}");
+
+            if (!await blobClient.ExistsAsync())
+            {
+                return NotFound("File not found in blob storage.");
+            }
+
+            var stream = new MemoryStream();
+            await blobClient.DownloadToAsync(stream);
+            stream.Position = 0;
+
+            return File(
+                stream,
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                "report.xlsx"
+            );
+        }
+
     }
 }
