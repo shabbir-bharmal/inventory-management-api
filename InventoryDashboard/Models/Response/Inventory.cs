@@ -2,8 +2,11 @@
 {
     public class Inventory
     {
-        public string ProductID { get; init; } = string.Empty;
-        public string WarehouseID { get; init; } = string.Empty;
-        public int Quantity { get; init; }
+        public string WarehouseID { get; set; } = string.Empty;
+        public string Warehouse { get; set; } = string.Empty;
+        public string ProductID { get; set; } = string.Empty;
+        public string Product { get; set; } = string.Empty;
+        public int Quantity { get; set; }
+        public int ReorderLevel { get; set; }
     }
 }

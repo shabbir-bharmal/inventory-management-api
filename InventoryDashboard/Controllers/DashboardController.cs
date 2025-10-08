@@ -16,6 +16,25 @@ namespace InventoryDashboard.Controllers
             _logger = logger;
         }
 
+        [HttpGet("summary")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> GetDashboardSummaryAsync()
+        {
+            try
+            {
+                var summary = await _dashboardService.GetDashboardSummaryAsync();
+                return Ok(summary);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error fetching dashboard summary");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+
+
+
         [HttpGet("Products")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]

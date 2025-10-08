@@ -7,5 +7,6 @@ namespace InventoryDashboard.Services
         Task<List<Product>> GetProductsAsync();
         Task<List<Warehouse>> GetWarehousesAsync();
         Task<List<Inventory>> GetInventoryAsync();
+        Task<DashboardSummary> GetDashboardSummaryAsync();
     }
 }
