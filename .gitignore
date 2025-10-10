@@ -52,3 +52,6 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+/.vs
+/InventoryDashboard/InventoryDashboard.csproj.user
+/InventoryDashboard/InventoryDashboard.http
