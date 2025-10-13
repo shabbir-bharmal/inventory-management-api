@@ -180,7 +180,7 @@ To deploy on Azure:
 You can include images like this in your README:
 
 ```markdown
-![Dashboard Preview](https://raw.githubusercontent.com/shabbir-bharmal/inventory-management/main/src/assets/dashboard-preview.png)
+![Dashboard Preview](https://github.com/shabbir-bharmal/inventory-management/blob/main/public/images/inventory-dashboard.png)
 ```
 
 ---
@@ -189,12 +189,6 @@ You can include images like this in your README:
 
 **Shabbir Bharmal**  
 [GitHub Profile](https://github.com/shabbir-bharmal)
-
----
-
-## 🪪 License
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
 ---
 
