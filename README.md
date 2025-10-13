@@ -175,16 +175,6 @@ To deploy on Azure:
 
 ---
 
-## 📸 Dashboard Preview
-
-You can include images like this in your README:
-
-```markdown
-![Dashboard Preview](https://github.com/shabbir-bharmal/inventory-management/blob/main/public/images/inventory-dashboard.png)
-```
-
----
-
 ## 🧑‍💻 Author
 
 **Shabbir Bharmal**  
